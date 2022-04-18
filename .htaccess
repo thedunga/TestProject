@@ -1,0 +1,14 @@
+RewriteEngine On
+
+ErrorDocument 404 /go/pages/404.php
+
+RewriteRule ^private/(.*) user/$1
+RewriteRule ^private user/pages/index.php
+
+RewriteRule ^index? pages/index.php
+RewriteRule ^about-us? pages/about.php
+RewriteRule ^contact-us? pages/contact.php
+RewriteRule ^pricing? pages/plans.php
+RewriteRule ^get-a-quote? pages/quote.php
+RewriteRule ^track-package/([0-9a-zA-Z]+)$ pages/track.php?code=$1
+RewriteRule ^tracking? pages/track.php
